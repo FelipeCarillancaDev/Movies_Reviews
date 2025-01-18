@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+
+# Dependencias específicas de npm
+package-lock.json
+
+# Archivos de configuración del editor (por ejemplo, WebStorm, Visual Studio Code)
+.idea/
+.vscode/
+
+# Archivos de entorno
+.env
+
+# Otros archivos generados automáticamente
+*.log
+*.tmp
