@@ -25,7 +25,7 @@ export const findReviewById = async (req, res) => {
   try {
     const reviewId = parseInt(req.params.id);
     if (isNaN(reviewId)) {
-      return res.status(400).json({ message: "ID de Reseña invático" });
+      return res.status(400).json({ message: "ID de Reseña inválido" });
     }
     const review = await Reviews.findOne({ where: { id: reviewId } });
     if (!review) {

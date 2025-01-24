@@ -48,15 +48,15 @@ export const deleteMovie = async (req, res) => {
       return res.status(400).json({ message: "ID de película inválido" });
     }
     const result = await Movie.destroy({
-      where: { id: req.params.id }
+      where: { id: movieId }
     })
     if (result === 0) {
       return res.status(404).json({ message: "Película no encontrada" });
     }
     res.status(200).json({ message: "Película eliminada con éxito" });
   } catch (error) {
-    console.error("Error al obtener películas:", error);
-    res.status(500).json({ message: "Error al obtener películas" });
+    console.error("Error al eliminar películas:", error);
+    res.status(500).json({ message: "Error al eliminar películas" });
   }
 };
 
